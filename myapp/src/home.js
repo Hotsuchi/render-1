@@ -1,4 +1,6 @@
 import axios from 'axios';
+import Header from './components/header.js';
+import Content from './components/content.js';
 import { useEffect,useState } from 'react';
 
 const Home = ({setMainPage})=>{
@@ -26,9 +28,9 @@ const Home = ({setMainPage})=>{
     }
     
     return(
-        <div>
-            {userInfo.uid}
-            <button onClick={logout} className='border bg-red-700'>Log Out</button>
+        <div className='w-screen min-h-[100vh] bg-slate-800 text-white'>
+            <Header setMainPage={setMainPage}/>
+            <Content userInfo={userInfo}/>
         </div>
     )
 }
