@@ -28,7 +28,7 @@ const Home = ({setMainPage})=>{
     return(
         <div>
             {userInfo.uid}
-            <button onClick={logout} className='border'>Log Out</button>
+            <button onClick={logout} className='border bg-red-700'>Log Out</button>
         </div>
     )
 }
