@@ -1,7 +1,7 @@
 const jwt = require('jsonwebtoken');
 const express = require('express');
-const userRouter = express.Router();
-const { signup,login,home } = require('../controler/userControler.js');
+const adminRouter = express.Router();
+const { signup,login,home } = require('../controler/adminControler.js');
 
 // Middleware
 const userVerify = (req,res,next)=>{
@@ -22,8 +22,8 @@ const userVerify = (req,res,next)=>{
     
 }
 
-userRouter.post('/signup',signup);
-userRouter.post('/login',login);
-userRouter.get('/',userVerify,home);
+adminRouter.post('/signup',signup);
+adminRouter.post('/login',login);
+adminRouter.get('/',userVerify,home);
 
-module.exports = userRouter;
+module.exports = adminRouter;

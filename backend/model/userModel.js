@@ -13,7 +13,9 @@ const userSchema = new mongoose.Schema({
     uterm:String,
 })
 
+
 const User = mongoose.model('User',userSchema);
+const Admin = mongoose.model('Admin',userSchema);
 
 
-module.exports = { User };
+module.exports = { User,Admin };
